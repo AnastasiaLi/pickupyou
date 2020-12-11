@@ -1,0 +1,24 @@
+{
+  "name": "pickupyou",
+  "version": "1.0.0",
+  "description": "pickupyou",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnastasiaLi/pickupyou.git"
+  },
+  "author": "liyan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnastasiaLi/pickupyou/issues"
+  },
+  "homepage": "https://github.com/AnastasiaLi/pickupyou#readme",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "ding-robot": "^1.0.0",
+    "node-schedule": "^1.3.2"
+  }
+}
