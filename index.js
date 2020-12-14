@@ -24,14 +24,20 @@ Date.prototype.format = function (fmt) {
     }
     return fmt;
 }
-const currentDate = new Date().format("yyyy-MM-dd");
+let holidayData = {};
 
 async function holiday() {
+    const currentDate = new Date().format("yyyy-MM-dd");
+    if(holidayData.date === currentDate){
+        return  holidayData;
+    }
+
     const info = await axios({
         url: "http://api.tianapi.com/txapi/jiejiari/index?key=bddd3dfd723c540b175107643078b4da&date=" + currentDate, //需要访问的资源链接
         method: "GET",
     })
-    return info.data.newslist[0];
+    holidayData = info.data.newslist[0];
+    return holidayData;
 }
 
 const scheduleCronstyle1 = () => {
